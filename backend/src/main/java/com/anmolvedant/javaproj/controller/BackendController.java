@@ -65,7 +65,11 @@ public class BackendController {
 //        LOG.info("GET called on /hello resource");
         return json;
     }
+    @GetMapping(value = "/", produces = MediaType.TEXT_PLAIN_VALUE)
+    public String helloindex() {
 
+        return "Hello there";
+    }
 //    @GetMapping(path = "/data/menu")
 //    public String dbData() throws IOException,InterruptedException, ExecutionException {
 ////        FileInputStream serviceAccount = new FileInputStream("./ServiceAccountKey.json");
