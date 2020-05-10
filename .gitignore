@@ -26,7 +26,7 @@ target
 # logback
 logback.out.xml
 
-backend/src/main/resources/public/
+# backend/src/main/resources/public/
 backend/target
 frontend/dist/
 frontend/node/
@@ -41,5 +41,4 @@ frontend/yarn.lock
 security/target/
 selenium-debug.log
 
-!*backend/src/main/resources/public/error
 !.mvn/wrapper/maven-wrapper.jar
