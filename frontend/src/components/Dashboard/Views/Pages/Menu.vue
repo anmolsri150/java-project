@@ -136,7 +136,7 @@
         })
       },
       addItem () {
-        let sessionurl = 'http://localhost:8098/api/data/menu/addItem/'
+        let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu/addItem/'
         let vm = this
         axios.post(sessionurl, this.model, {}).then(res => {
           console.log(res.data)

@@ -78,7 +78,7 @@
           <div class="container">
             <div class="copyright">
               &copy;
-              <a href="http://localhost:8098" target="_blank">ManipalX</a>
+              <a href="https://rms-anmolsri150.herokuapp.com" target="_blank">ManipalX</a>
             </div>
           </div>
         </footer>

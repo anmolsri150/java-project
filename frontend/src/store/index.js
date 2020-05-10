@@ -34,7 +34,7 @@ export const store = new Vuex.Store({
       console.log(t)
       let dat = {'name': t.name, 'phone': t.phone, 'items': d}
       console.log(dat)
-      let sessionurl = 'http://localhost:8098/api/data/createOrder/'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/createOrder/'
       axios.post(sessionurl, dat, {}).then(res => {
         console.log(res.data)
         state.lastorder = res.data
@@ -77,7 +77,7 @@ export const store = new Vuex.Store({
     fetchUserProfile ({ commit, state }) {
       console.log('FETCHING PROFILE')
       console.log(state.user.uid)
-      let sessionurl = 'http://localhost:8098/api/getUser/' + state.user.uid
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/getUser/' + state.user.uid
       let uname = 'admin'
       let pass = 'password'
       axios.post(sessionurl, {}, {
@@ -94,7 +94,7 @@ export const store = new Vuex.Store({
     },
     fetchMenu ({ commit, state }) {
       console.log('FETCHING Menu')
-      let sessionurl = 'http://localhost:8098/api/data/menu'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu'
       axios.post(sessionurl, {}, {}).then(res => {
         console.log(res.data)
         commit('setMenu', res.data)

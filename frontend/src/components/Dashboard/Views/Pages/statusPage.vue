@@ -87,7 +87,7 @@
       // this.$store.dispatch('fetchMenu')
       console.log('FETCHING Menu')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/getStatuses'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getStatuses'
       setInterval(() => {
         axios.post(sessionurl, {}, {}).then(res => {
           console.log(res.data)

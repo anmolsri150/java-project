@@ -88,7 +88,7 @@
       // this.$store.dispatch('fetchorders')
       console.log('FETCHING All Orders')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/getOrders'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getOrders'
       axios.post(sessionurl, {}, {}).then(res => {
         console.log(res.data)
         vm.orders = res.data

@@ -200,12 +200,12 @@
         })
       },
       updateItem () {
-        let sessionurl = 'http://localhost:8098/api/data/menu/updateItem/'
+        let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu/updateItem/'
         let vm = this
         axios.post(sessionurl, vm.model, {}).then(res => {
           console.log(res.data)
           console.log('FETCHING Menu')
-          let sessionurl = 'http://localhost:8098/api/data/menu'
+          let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu'
           axios.post(sessionurl, {}, {}).then(res => {
             console.log(res.data)
             vm.menu = res.data
@@ -245,7 +245,7 @@
           confirmButtonText: 'Yes, delete it!',
           buttonsStyling: false
         }).then(function () {
-          let url = 'http://localhost:8098/api/data/menu/deleteItem/' + row.id
+          let url = 'https://rms-anmolsri150.herokuapp.com/api/data/menu/deleteItem/' + row.id
           axios.get(url).then(resp => {
             swal({
               title: 'Deleted!',
@@ -256,7 +256,7 @@
             })
             console.log(resp.data)
             console.log('FETCHING Menu')
-            let sessionurl = 'http://localhost:8098/api/data/menu'
+            let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu'
             axios.post(sessionurl, {}, {}).then(res => {
               console.log(res.data)
               vm.menu = res.data
@@ -273,7 +273,7 @@
       // this.$store.dispatch('fetchMenu')
       console.log('FETCHING Menu')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/menu'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/menu'
       axios.post(sessionurl, {}, {}).then(res => {
         console.log(res.data)
         vm.menu = res.data

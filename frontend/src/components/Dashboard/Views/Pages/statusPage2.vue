@@ -70,7 +70,7 @@
           <div class="container">
             <div class="copyright">
               &copy;
-              <a href="http://localhost:8098" target="_blank">ManipalX</a>
+              <a href="https://rms-anmolsri150.herokuapp.com" target="_blank">ManipalX</a>
             </div>
           </div>
         </footer>
@@ -131,7 +131,7 @@
     mounted () {
       console.log('FETCHING Statuses')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/getStatuses'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getStatuses'
       setInterval(() => {
         axios.post(sessionurl, {}, {}).then(res => {
           console.log(res.data)

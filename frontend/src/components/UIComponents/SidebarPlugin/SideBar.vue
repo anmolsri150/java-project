@@ -5,13 +5,13 @@
         style="z-index:999;">
     <div class="logo">
       <a class="simple-text logo-mini"
-         href="http://localhost:8098">
+         href="https://rms-anmolsri150.herokuapp.com">
           <div class="logo-img">
               <img :src="logo" alt="">
           </div>
       </a>
       <a class="simple-text logo-normal"
-         href="http://localhost:8098">
+         href="https://rms-anmolsri150.herokuapp.com">
           {{ title }}
       </a>
     </div>

@@ -177,8 +177,8 @@
       'scrollbars=yes'
     ],
     styles: [
-      'http://localhost:8098/static/css/themify-icons.css',
-      'http://localhost:8098/static/css/app.6d7981c6fc2b2e48b13611629ea164ca.css'
+      'https://rms-anmolsri150.herokuapp.com/static/css/themify-icons.css',
+      'https://rms-anmolsri150.herokuapp.com/static/css/app.6d7981c6fc2b2e48b13611629ea164ca.css'
     ]
   }
 
@@ -232,7 +232,7 @@
     mounted () {
       console.log('FETCHING Menu')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/getOrder/' + this.$route.params.id
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getOrder/' + this.$route.params.id
       axios.post(sessionurl, {}, {}).then(res => {
         console.log(res.data)
         vm.name = res.data.name
@@ -245,7 +245,7 @@
         vm.items.forEach(function (x) {
           d = d + ' ' + x
         })
-        let sessionurl1 = 'http://localhost:8098/api/data/getItems/' + d.trim()
+        let sessionurl1 = 'https://rms-anmolsri150.herokuapp.com/api/data/getItems/' + d.trim()
         axios.post(sessionurl1, {}, {}).then(res => {
           vm.itemsdata = res.data
           console.log('GETTING ITEMS DATA')

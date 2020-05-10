@@ -172,7 +172,7 @@
         })
       },
       updateItem () {
-        let sessionurl = 'http://localhost:8098/api/data/updateStatus/'
+        let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/updateStatus/'
         let vm = this
         swal({
           title: 'Are you sure?',
@@ -187,7 +187,7 @@
           axios.post(sessionurl, vm.model, {}).then(res => {
             console.log(res.data)
             console.log('FETCHING Statuses')
-            let sessionurl = 'http://localhost:8098/api/data/getStatuses'
+            let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getStatuses'
             axios.post(sessionurl, {}, {}).then(res => {
               console.log(res.data)
               vm.statuses = res.data
@@ -220,7 +220,7 @@
       // this.$store.dispatch('fetchMenu')
       console.log('FETCHING Statuses')
       let vm = this
-      let sessionurl = 'http://localhost:8098/api/data/getStatuses'
+      let sessionurl = 'https://rms-anmolsri150.herokuapp.com/api/data/getStatuses'
       setInterval(() => {
         axios.post(sessionurl, {}, {}).then(res => {
           console.log(res.data)
